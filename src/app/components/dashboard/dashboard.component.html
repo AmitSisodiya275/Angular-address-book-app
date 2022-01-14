@@ -19,17 +19,6 @@
                 <th></th>
             </tr>
 
-            <tr>
-                <td>Amit Sisodiya</td>
-                <td>Behind Adarsh Vidyalaya, Adarsh Co. Op. Soc.</td>
-                <td>Mumbai</td>
-                <td>Maharshtra</td>
-                <td>400071</td>
-                <td>8080808080</td>
-                <td>
-                    <img src="assets/delete.svg" alt=""> <img src="assets/edit.svg" alt="">
-                </td>
-            </tr>
             <tr *ngFor="let person of personList">
                 <td>{{person.fullName}} </td>
                 <td> {{person.address}}</td>
@@ -38,7 +27,7 @@
                 <td>{{person.zipCode}} </td>
                 <td>{{person.phoneNumber}} </td>
                 <td>
-                    <img src="assets/delete.svg" alt=""> <img src="assets/edit.svg" alt="">
+                   <a href="" (click)="onDelete(person.id)"><img src="assets/delete.svg" alt=""></a>  <img src="assets/edit.svg" alt="">
                 </td>
             </tr>
         </table>

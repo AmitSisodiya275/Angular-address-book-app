@@ -20,4 +20,8 @@ export class PersonService {
   addPerson(person:Person):Observable<Person>{
     return this.http.post<Person>(`${this.apiUrl}/add`, person);
   }
+
+  deletePerson(id:number){
+    return this.http.delete(`${this.apiUrl}/delete/${id}`)
+  }
 }

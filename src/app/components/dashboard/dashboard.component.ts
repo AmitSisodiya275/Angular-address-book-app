@@ -23,4 +23,11 @@ export class DashboardComponent implements OnInit {
       error=>{console.log(error)}
     );
   }
+
+  onDelete(id:number){
+    this.service.deletePerson(id).subscribe(
+      data=>{console.log(data)},
+      error=>{console.log(error)} );
+    this.getAllPersons();
+  }
 }

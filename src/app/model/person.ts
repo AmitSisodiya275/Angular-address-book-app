@@ -1,4 +1,5 @@
 export class Person {
+    public id!:number;
     public fullName:string | undefined;
     public address: string | undefined;
     public city:string | undefined;
