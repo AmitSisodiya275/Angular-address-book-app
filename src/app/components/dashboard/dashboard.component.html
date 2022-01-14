@@ -27,7 +27,7 @@
                 <td>{{person.zipCode}} </td>
                 <td>{{person.phoneNumber}} </td>
                 <td>
-                   <a href="" (click)="onDelete(person.id)"><img src="assets/delete.svg" alt=""></a>  <img src="assets/edit.svg" alt="">
+                   <a href="" (click)="onDelete(person.id)"><img src="assets/delete.svg" alt=""></a> <a routerLink="/update-person/{{person.id}}"> <img src="assets/edit.svg" alt=""></a>
                 </td>
             </tr>
         </table>

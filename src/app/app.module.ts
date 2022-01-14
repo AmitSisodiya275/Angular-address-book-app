@@ -8,13 +8,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { AddPersonComponent } from './components/add-person/add-person.component';
+import { UpdatePersonComponent } from './components/update-person/update-person.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     DashboardComponent,
-    AddPersonComponent
+    AddPersonComponent,
+    UpdatePersonComponent
   ],
   imports: [
     BrowserModule,

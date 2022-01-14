@@ -22,6 +22,14 @@ export class PersonService {
   }
 
   deletePerson(id:number){
-    return this.http.delete(`${this.apiUrl}/delete/${id}`)
+    return this.http.delete(`${this.apiUrl}/delete/${id}`);
+  }
+
+  getPersonById(id:number):Observable<Person>{
+    return this.http.get<Person>(`${this.apiUrl}/get/${id}`);
+  }
+
+  updatePerson(id:number, person: Person):Observable<Person>{
+    return this.http.put<Person>(`${this.apiUrl}/update/${id}`, person);
   }
 }
