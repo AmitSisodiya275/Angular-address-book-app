@@ -1,2 +1,48 @@
-<app-header></app-header>
-<p>dashboard works!</p>
+<app-header></app-header><div class="bg-color">
+<div class="main-content">
+    <div class="form-header">
+        <div class="person-details-text">Person Details</div>
+        <div >
+            <a class="add-user" routerLink="/add-person"> <img src="assets/add-24px.svg" alt="Add User">Add Person</a>
+        </div>
+    </div>
+
+    <div class="person-detail-table">
+        <table class="table-main">
+            <tr>
+                <th>Fullname</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip Code</th>
+                <th>Phone Number</th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td>Amit Sisodiya</td>
+                <td>Behind Adarsh Vidyalaya, Adarsh Co. Op. Soc.</td>
+                <td>Mumbai</td>
+                <td>Maharshtra</td>
+                <td>400071</td>
+                <td>8080808080</td>
+                <td>
+                    <img src="assets/delete.svg" alt=""> <img src="assets/edit.svg" alt="">
+                </td>
+            </tr>
+            <tr *ngFor="let person of personList">
+                <td>{{person.fullName}} </td>
+                <td> {{person.address}}</td>
+                <td>{{person.city}} </td>
+                <td>{{person.state}} </td>
+                <td>{{person.zipCode}} </td>
+                <td>{{person.phoneNumber}} </td>
+                <td>
+                    <img src="assets/delete.svg" alt=""> <img src="assets/edit.svg" alt="">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+</div>
